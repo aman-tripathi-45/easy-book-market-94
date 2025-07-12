@@ -1,3 +1,4 @@
+
 import { Moon, Sun, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
@@ -20,24 +21,23 @@ const Header = () => {
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
-          {/* Logo and Title */}
+          {/* Logo and Title - Logo positioned slightly lower */}
           <div className="flex items-center gap-3">
             <img 
               src="/lovable-uploads/69bd91d0-725e-492c-aa0d-ca13c2901092.png" 
               alt="Ideal Institute of Technology Logo" 
-              className="h-12 w-12 rounded-full shadow-lg"
+              className="h-12 w-12 mt-1"
             />
             <h1 className="text-hero-text font-poppins text-lg font-semibold tracking-wide">
               Ideal Institute of Technology
             </h1>
           </div>
 
-          {/* Navigation - Centered */}
+          {/* Navigation - Centered with updated items */}
           <nav className="hidden md:flex items-center gap-8">
             <NavItem href="/" active>Home</NavItem>
-            <NavItem href="#browse">Academic Analyzer</NavItem>
-            <NavItem href="#placement">Placement Hub</NavItem>
-            <NavItem href="#training">Training Analyzer</NavItem>
+            <NavItem href="/login">Login</NavItem>
+            <NavItem href="/register">Register</NavItem>
           </nav>
 
           {/* Action Buttons */}
