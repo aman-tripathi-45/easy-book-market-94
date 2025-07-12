@@ -28,20 +28,20 @@ const Header = () => {
               alt="Ideal Institute of Technology Logo" 
               className="h-12 w-12 mt-2"
             />
-            <h1 className="text-hero-text font-poppins text-lg font-semibold tracking-wide mt-2">
+            <h1 className="text-hero-text font-poppins text-lg font-semibold tracking-wide mt-2 whitespace-nowrap">
               Ideal Institute of Technology
             </h1>
           </div>
 
-          {/* Navigation - Centered and moved slightly left */}
-          <nav className="hidden md:flex items-center gap-6 -ml-8">
-            <NavItem href="/" active>Home</NavItem>
-            <NavItem href="/login">Login</NavItem>
-            <NavItem href="/register">Register</NavItem>
-          </nav>
+          {/* Navigation and Theme Toggle - Grouped closer together */}
+          <div className="hidden md:flex items-center gap-6">
+            <nav className="flex items-center gap-6">
+              <NavItem href="/" active>Home</NavItem>
+              <NavItem href="/login">Login</NavItem>
+              <NavItem href="/register">Register</NavItem>
+            </nav>
 
-          {/* Theme Toggle Button - Settings icon removed */}
-          <div className="flex items-center">
+            {/* Theme Toggle Button */}
             <Button 
               variant="ghost" 
               size="sm" 
@@ -49,7 +49,7 @@ const Header = () => {
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
               {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-              <span className="hidden md:inline text-sm font-medium">
+              <span className="text-sm font-medium">
                 {theme === "dark" ? "Light" : "Dark"}
               </span>
             </Button>
