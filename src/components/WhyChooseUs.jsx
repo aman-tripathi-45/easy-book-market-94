@@ -74,15 +74,7 @@ const WhyChooseUs = () => {
   );
 };
 
-const BookstoreCard = ({ 
-  icon, 
-  title, 
-  description 
-}: { 
-  icon: React.ReactNode; 
-  title: string; 
-  description: string; 
-}) => {
+const BookstoreCard = ({ icon, title, description }) => {
   return (
     <div className="group bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-border/50 hover:bg-card transition-all duration-300 hover:-translate-y-2 shadow-elegant hover:shadow-glow">
       <div className="text-primary mb-6 group-hover:scale-110 transition-transform duration-300 flex justify-center">

@@ -60,7 +60,7 @@ const Header = () => {
   );
 };
 
-const NavItem = ({ href, children, active = false }: { href: string; children: React.ReactNode; active?: boolean }) => {
+const NavItem = ({ href, children, active = false }) => {
   return (
     <a
       href={href}

@@ -22,21 +22,21 @@ const Register = () => {
     confirmPassword: ""
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSelectChange = (name: string) => (value: string) => {
+  const handleSelectChange = (name) => (value) => {
     setFormData({
       ...formData,
       [name]: value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords don't match!");
