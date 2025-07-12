@@ -1,5 +1,5 @@
 
-import { Moon, Sun, Settings } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -19,29 +19,29 @@ const Header = () => {
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="container mx-auto px-6 py-6">
+      <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo and Title - Logo positioned slightly lower */}
-          <div className="flex items-center gap-3">
+          {/* Logo and Title - Positioned slightly lower and moved left */}
+          <div className="flex items-center gap-3 ml-4">
             <img 
               src="/lovable-uploads/69bd91d0-725e-492c-aa0d-ca13c2901092.png" 
               alt="Ideal Institute of Technology Logo" 
-              className="h-12 w-12 mt-1"
+              className="h-12 w-12 mt-2"
             />
-            <h1 className="text-hero-text font-poppins text-lg font-semibold tracking-wide">
+            <h1 className="text-hero-text font-poppins text-lg font-semibold tracking-wide mt-2">
               Ideal Institute of Technology
             </h1>
           </div>
 
-          {/* Navigation - Centered with updated items */}
-          <nav className="hidden md:flex items-center gap-8">
+          {/* Navigation - Centered and moved slightly left */}
+          <nav className="hidden md:flex items-center gap-6 -ml-8">
             <NavItem href="/" active>Home</NavItem>
             <NavItem href="/login">Login</NavItem>
             <NavItem href="/register">Register</NavItem>
           </nav>
 
-          {/* Action Buttons */}
-          <div className="flex items-center gap-4">
+          {/* Theme Toggle Button - Settings icon removed */}
+          <div className="flex items-center">
             <Button 
               variant="ghost" 
               size="sm" 
@@ -52,9 +52,6 @@ const Header = () => {
               <span className="hidden md:inline text-sm font-medium">
                 {theme === "dark" ? "Light" : "Dark"}
               </span>
-            </Button>
-            <Button variant="ghost" size="icon" className="text-hero-text hover:bg-hero-text/10">
-              <Settings className="h-5 w-5" />
             </Button>
           </div>
         </div>
